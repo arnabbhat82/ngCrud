@@ -10,7 +10,7 @@ import { Customer } from '../customer.model';
 })
 export class CustomerAddComponent {
   customer: Customer = {
-    id: 0,
+    id: '',
     firstName: '',
     lastName: '',
     email: '',

@@ -1,0 +1,26 @@
+<h2>Customer List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.firstName }} {{ customer.lastName }}</td>
+      <td>{{ customer.email }}</td>
+      <td>{{ customer.phoneNo }}</td>
+      <td>{{ customer.address.addressLine1 }}, {{ customer.address.city }}, {{ customer.address.state }}, {{ customer.address.pinCode }}, {{ customer.address.country }}</td>
+      <td>
+        <button (click)="deleteCustomer(customer.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
